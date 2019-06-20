@@ -34,3 +34,11 @@ Reset only resets power. No factory reset.
   - wait for ***Checking for application***
     - press q (p worked also?!)
   - select ***11 - Restore configuration to factory defaults***
+
+### How to generate qr code
+- ```pacman -S qrencode```
+- ```pacman -S imagmagick```
+- in qrcode folder
+  - ```qrencode -o qrcode.png -d 144 -l H https://github.com/Sicaine/hw-milkyway-netgear-prosafe-m4100-26G```
+  - ```convert logo.png -geometry 35x35 -bordercolor white -border 2x2 prep.png```
+  - ```convert qrcode.png prep.png -gravity center -composite qrcode_with_logo.png```
